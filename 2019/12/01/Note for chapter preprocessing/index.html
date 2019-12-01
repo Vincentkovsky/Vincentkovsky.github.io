@@ -45,28 +45,39 @@
   };
 </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Vincentkovsky&#39;s blog">
-<meta property="og:url" content="https:&#x2F;&#x2F;vincentkovsky.github.io&#x2F;index.html">
+  <meta name="description" content="Note for chapter Preprocessing Typically there are 6 steps for fMRI data preprocessing: slice-timing correction, head movement correction, coregistration, normalization, spatial data smoothing and tem">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Note for chapter preprocessing">
+<meta property="og:url" content="https:&#x2F;&#x2F;vincentkovsky.github.io&#x2F;2019&#x2F;12&#x2F;01&#x2F;Note%20for%20chapter%20preprocessing&#x2F;index.html">
 <meta property="og:site_name" content="Vincentkovsky&#39;s blog">
+<meta property="og:description" content="Note for chapter Preprocessing Typically there are 6 steps for fMRI data preprocessing: slice-timing correction, head movement correction, coregistration, normalization, spatial data smoothing and tem">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="c:%5CUsers%5Cvincent%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20191201221451606.png">
+<meta property="og:image" content="c:%5CUsers%5Cvincent%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20191201221721189.png">
+<meta property="og:image" content="c:%5CUsers%5Cvincent%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20191201221809564.png">
+<meta property="og:image" content="c:%5CUsers%5Cvincent%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20191201221858975.png">
+<meta property="og:image" content="c:%5CUsers%5Cvincent%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20191201221957764.png">
+<meta property="og:image" content="c:%5CUsers%5Cvincent%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20191201222011994.png">
+<meta property="og:image" content="c:%5CUsers%5Cvincent%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20191201222039828.png">
+<meta property="og:updated_time" content="2019-12-01T14:21:21.232Z">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="c:%5CUsers%5Cvincent%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20191201221451606.png">
 
-<link rel="canonical" href="https://vincentkovsky.github.io/">
+<link rel="canonical" href="https://vincentkovsky.github.io/2019/12/01/Note%20for%20chapter%20preprocessing/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome: true,
-    isPost: false,
+    isHome: false,
+    isPost: true,
     isPage: false,
     isArchive: false
   };
 </script>
 
-  <title>Vincentkovsky's blog</title>
+  <title>Note for chapter preprocessing | Vincentkovsky's blog</title>
   
 
 
@@ -161,10 +172,10 @@
             
 
   <div class="posts-expand">
-        
+      
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="en">
     <link itemprop="mainEntityOfPage" href="https://vincentkovsky.github.io/2019/12/01/Note%20for%20chapter%20preprocessing/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -178,8 +189,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/12/01/Note%20for%20chapter%20preprocessing/" class="post-title-link" itemprop="url">Note for chapter preprocessing</a>
+          Note for chapter preprocessing
         </h1>
 
         <div class="post-meta">
@@ -204,7 +214,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="Note-for-chapter-Preprocessing"><a href="#Note-for-chapter-Preprocessing" class="headerlink" title="Note for chapter Preprocessing"></a>Note for chapter <em>Preprocessing</em></h1><hr>
+        <h1 id="Note-for-chapter-Preprocessing"><a href="#Note-for-chapter-Preprocessing" class="headerlink" title="Note for chapter Preprocessing"></a>Note for chapter <em>Preprocessing</em></h1><hr>
 <p>Typically there are 6 steps for fMRI data preprocessing: slice-timing correction, head movement correction, coregistration, normalization, spatial data smoothing and temporal filtering.</p>
 <h2 id="Slice-timing-correction"><a href="#Slice-timing-correction" class="headerlink" title="Slice-timing correction"></a>Slice-timing correction</h2><p>Almost all fMRI data are collected in slices and a scan of the whole brain typically include 30 to 75 slices. Interleaved slice acquisition, a common way, collects odd-numbered slices firstly (in ascending order) and then the even-numbered slices (in descending order). The TR is the time between the onsets of consecutive whole-brain scans, and it’s also the time for collecting all slices in one scan. That means there is a time difference (almost one TR long) between the acquisition of the first and last slices. In event-related experiments, slice-timing differences are problematic because subjects quickly alternate between task and rest. Slice-timing correction can be done in either preprocessing or considered in the statistical methods. Assume the TR is T seconds. Then let $ B(T<del>i</del>) $ denote the BOLD response collected during the ith TR from some voxel of interest. The data acquisition of ith TR begins at (i-1)T and ends at iT. So the time t<del>i</del> is somewhere in the interval [(i − 1)T, iT ].  The slice-timing difference is corrected by replacing the observed BOLD response $ B(T<del>i</del>) $ with estimated BOLD response B[(i-1)T].  The most common solution is temporal interpolation: take the observed values we have and predict the BOLD response at the beginning of the TR. And the most common forms of interpolation are linear, spline, and sinc. Slice-timing correction can also be operated during statistical analysis, and the common way is to choose a flexible model of the hrf that can account for moderate difference in timing.  Friston et al. (1998) proposed the temporal-derivative model, where the hrf is a weighted sum of a standard hrf and the temporal derivative of that hrf (the derivative increases earlier than the hrf and reaches its peak earlier):<br>                $<em>h(t)=\theta h(t)+\theta \dot h(t)</em>$</p>
 <p>But this temporal-derivative model is limited to roughly correct time difference less than the time between the initial peaks of the hrf and its derivative.</p>
@@ -225,24 +235,26 @@
 <p><img src="C:%5CUsers%5Cvincent%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20191201222039828.png" alt="image-20191201222039828"></p>
 <h2 id="Temporal-filtering"><a href="#Temporal-filtering" class="headerlink" title="Temporal filtering"></a>Temporal filtering</h2><p>The goal is to smooths the data (one dimensional time series) at each voxel across neighboring TRs. And it only makes sense as a method to reduce temporal low- frequency noise (unexplained and very slow changes in the BOLD responses- frequencies less than about 0.0083 Hz) while spatial smoothing filters out high- frequency spatial noise. </p>
 
-      
     </div>
 
     
     
     
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
+
+        
+
+
+        
       </footer>
+    
   </article>
   
   
   
 
   </div>
-
-  
-
 
 
           </div>
@@ -271,6 +283,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Note-for-chapter-Preprocessing"><span class="nav-number">1.</span> <span class="nav-text">Note for chapter Preprocessing</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Slice-timing-correction"><span class="nav-number">1.1.</span> <span class="nav-text">Slice-timing correction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Head-motion-correction"><span class="nav-number">1.2.</span> <span class="nav-text">Head motion correction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Coregistration"><span class="nav-number">1.3.</span> <span class="nav-text">Coregistration</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Normalization"><span class="nav-number">1.4.</span> <span class="nav-text">Normalization</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Spatial-smoothing"><span class="nav-number">1.5.</span> <span class="nav-text">Spatial smoothing</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Temporal-filtering"><span class="nav-number">1.6.</span> <span class="nav-text">Temporal filtering</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
