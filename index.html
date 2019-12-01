@@ -46,9 +46,9 @@
 </script>
 
   <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="Vincentkovsky&#39;s blog">
 <meta property="og:url" content="https:&#x2F;&#x2F;vincentkovsky.github.io&#x2F;index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="Vincentkovsky&#39;s blog">
 <meta property="og:locale" content="en">
 <meta name="twitter:card" content="summary">
 
@@ -66,7 +66,7 @@
   };
 </script>
 
-  <title>Hexo</title>
+  <title>Vincentkovsky's blog</title>
   
 
 
@@ -110,7 +110,7 @@
     <div>
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Hexo</span>
+        <span class="site-title">Vincentkovsky's blog</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -165,21 +165,21 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://vincentkovsky.github.io/2019/12/01/hello-world/">
+    <link itemprop="mainEntityOfPage" href="https://vincentkovsky.github.io/2019/12/01/Note%20for%20chapter%20preprocessing%20/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="John Doe">
+      <meta itemprop="name" content="Vincentkovsky">
       <meta itemprop="description" content="">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
+      <meta itemprop="name" content="Vincentkovsky's blog">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2019/12/01/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
+            <a href="/2019/12/01/Note%20for%20chapter%20preprocessing%20/" class="post-title-link" itemprop="url">Note for chapter *Preprocessing*</a>
         </h1>
 
         <div class="post-meta">
@@ -188,8 +188,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
+              
 
-              <time title="Created: 2019-12-01 16:52:22" itemprop="dateCreated datePublished" datetime="2019-12-01T16:52:22+08:00">2019-12-01</time>
+              <time title="Created: 2019-12-01 16:52:22 / Modified: 21:56:56" itemprop="dateCreated datePublished" datetime="2019-12-01T16:52:22+08:00">2019-12-01</time>
             </span>
 
           
@@ -203,8 +204,8 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span></pre></td></tr></table></figure>
+          <p>Typically there are 6 steps for fMRI data preprocessing: slice-timing correction, head movement correction, coregistration, normalization, spatial data smoothing and temporal filtering.</p>
+<h3 id="Slice-timing-correction"><a href="#Slice-timing-correction" class="headerlink" title="Slice-timing correction"></a>Slice-timing correction</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">Almost all fMRI data are collected <span class="keyword">in</span> slices and a scan of the whole brain typically include 30 to 75 slices. Interleaved slice acquisition, a common way, collects odd-numbered slices firstly (<span class="keyword">in</span> ascending order) and <span class="keyword">then</span> the even-numbered slices (<span class="keyword">in</span> descending order). The TR is the time between the onsets of consecutive whole-brain scans, and it’s also the time <span class="keyword">for</span> collecting all slices <span class="keyword">in</span> one scan. That means there is a time difference (almost one TR long) between the acquisition of the first and last slices. In event-related experiments, slice-timing differences are problematic because subjects quickly alternate between task and rest. Slice-timing correction can be <span class="keyword">done</span> <span class="keyword">in</span> either preprocessing or considered <span class="keyword">in</span> the statistical methods. Assume the TR is T seconds. Then <span class="built_in">let</span> <span class="variable">$B</span>(T~i~)$</span></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
 <h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">$ hexo server</span></pre></td></tr></table></figure>
@@ -268,7 +269,7 @@
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">John Doe</p>
+  <p class="site-author-name" itemprop="name">Vincentkovsky</p>
   <div class="site-description" itemprop="description"></div>
 </div>
 <div class="site-state-wrap motion-element">
@@ -306,7 +307,7 @@
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">John Doe</span>
+  <span class="author" itemprop="copyrightHolder">Vincentkovsky</span>
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v4.0.0
   </div>
