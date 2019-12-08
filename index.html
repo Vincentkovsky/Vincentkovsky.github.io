@@ -165,6 +165,71 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://vincentkovsky.github.io/2019/12/08/EEG-informed%20fMRI%20integration%20methods/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Vincentkovsky">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Vincentkovsky's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/12/08/EEG-informed%20fMRI%20integration%20methods/" class="post-title-link" itemprop="url">EEG-informed fMRI integration methods</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2019-12-08 18:21:41 / Modified: 18:31:57" itemprop="dateCreated datePublished" datetime="2019-12-08T18:21:41+08:00">2019-12-08</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="EEG-informed-fMRI-integration-methods"><a href="#EEG-informed-fMRI-integration-methods" class="headerlink" title="EEG-informed fMRI integration methods:"></a>EEG-informed fMRI integration methods:</h1><p>Data integration methods for mapping brain networks are subdivided into two types: univariate and multivariate methods. Univariate methods usually select only a single time-course representative of the phenomena of interest and then extract temporal or spectral features to predict BOLD changes. (EEG-informed) And multivariate methods take multiple EEG channels into consideration. </p>
+<h2 id="Univariate-methods"><a href="#Univariate-methods" class="headerlink" title="Univariate methods:"></a>Univariate methods:</h2><p>If a limited set of electrodes can reflect the phenomenon of interest of neural activity, the analyses can be concentrated on these electrodes. (Goldman et al., 2002) Fluctuations with a specific temporal structure can be extracted from the EEG using linear prediction algorithms only if the prior knowledge about the frequency and location of the sources of interest to be isolated is known. (Ferdowsi et al., 2015) The most commonly used spatial filtering strategy in this context is temporal ICA. (Leite et al., 2013) The most challenging part in ICA is the selection of ICs that best reflect the phenomenon of interest, and there are different selection criteria. In a visual inspection method, spatial patterns resembling that expected for a given activity of interest should be found in the IC topographies. (Debener et al., 2005). The events of interest can also be identified by inspecting the temporal dynamics of the IC time-courses. (Jann et al., 2008) If more than one EEG acquisition is performed, the reproducibility of the ICs across runs should also be considered. (Leite et al., 2013)</p>
+<p>Take epilepsy as example, the EEG is visually inspected for events of interest in the simplest approach of integrating EEG and fMRI. Inter-ictal epileptiform discharges (IEDs) are modeled as stick functions, and ictal activity is modeled as boxcar functions (Leal et al., 2016). These epileptic events can be divided into different states and then the representation of the seizure dynamics can be even finer. (Thornton et al., 2010) </p>
+<p>More complex transfer functions based on time-frequency decompositions of the EEG signal between EEG and BOLD signals have been implemented to account for the rich temporal and spectral profiles of the EEG. (Scheeringa et al.,2008) In a GLM analysis, with regressors including the EEG power over multiple frequency bands, the individual contribution to the BOLD signal and the interactions can be clarified. (de Munck et al., 2009) </p>
+<h2 id="Multivariate-methods"><a href="#Multivariate-methods" class="headerlink" title="Multivariate methods:"></a>Multivariate methods:</h2><p>Compared to univariate methods, multivariate methods utilize data from multiple EEG channels and can capture spatial information. </p>
+<p>Based on the hypothesis that resting-state networks are reflected in both EEG and BOLD signals, there are studies on BOLD correlates of EEG microstates. By spatially correlating the simultaneous EEG topographies with EEG microstates, spontaneous BOLD fluctuations occurring during rest can be predicted. (Yuan et al., 2012) And the EEG microstates can be previously identified by clustering (Britz et al., 2010), ICA (Yuan et al., 2012), or topographic time-frequency decomposition  (Schwab et al., 2015). </p>
+<p>Other multivariate methods particularly aim at reflecting functional connectivity across the brain. In order to map the inter- and intra-hemispheric flow of information, the partial directed coherence (a directed measure of functional connectivity) across frequency bands can be correlated with BOLD (Biazoli et al., 2013). Previous study used the phase synchronization index (PSI) computed for a specific frequency and channels and mapped task-dependent BOLD signal changes. (Mizuhara et al. 2005) Another study used global field synchronization (GFS) to predict BOLD changes associated with face integration (Kottlow et al. 2012). GFS can quantify the overall EEG synchrony across the scalp. </p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
     <link itemprop="mainEntityOfPage" href="https://vincentkovsky.github.io/2019/12/01/Note%20for%20chapter%20preprocessing/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -284,7 +349,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">1</span>
+          <span class="site-state-item-count">2</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -325,18 +390,7 @@
   <span class="post-meta-divider">|</span>
   <div class="theme-info">Theme – <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.6.0
   </div>
-<div class="busuanzi-count">
-  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-    <span class="site-uv">
-      <i class="fa fa-user"></i>
-      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
-    </span>
-  
-    <span class="site-pv">
-      <i class="fa fa-eye"></i>
-      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
-    </span>
-    </div>
+
         
 
 

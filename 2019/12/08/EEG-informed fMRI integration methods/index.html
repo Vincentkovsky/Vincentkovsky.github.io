@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('https://Vincentkovsky.github.io').hostname,
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.6.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
+  };
+</script>
+
+  <meta name="description" content="EEG-informed fMRI integration methods:Data integration methods for mapping brain networks are subdivided into two types: univariate and multivariate methods. Univariate methods usually select only a s">
+<meta property="og:type" content="article">
+<meta property="og:title" content="EEG-informed fMRI integration methods">
+<meta property="og:url" content="https:&#x2F;&#x2F;vincentkovsky.github.io&#x2F;2019&#x2F;12&#x2F;08&#x2F;EEG-informed%20fMRI%20integration%20methods&#x2F;index.html">
+<meta property="og:site_name" content="Vincentkovsky&#39;s blog">
+<meta property="og:description" content="EEG-informed fMRI integration methods:Data integration methods for mapping brain networks are subdivided into two types: univariate and multivariate methods. Univariate methods usually select only a s">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-12-08T10:31:57.118Z">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://vincentkovsky.github.io/2019/12/08/EEG-informed%20fMRI%20integration%20methods/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>EEG-informed fMRI integration methods | Vincentkovsky's blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Vincentkovsky's blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
+
+  </li>
+  </ul>
+
+</nav>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="en">
+    <link itemprop="mainEntityOfPage" href="https://vincentkovsky.github.io/2019/12/08/EEG-informed%20fMRI%20integration%20methods/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Vincentkovsky">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Vincentkovsky's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          EEG-informed fMRI integration methods
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2019-12-08 18:21:41 / Modified: 18:31:57" itemprop="dateCreated datePublished" datetime="2019-12-08T18:21:41+08:00">2019-12-08</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="EEG-informed-fMRI-integration-methods"><a href="#EEG-informed-fMRI-integration-methods" class="headerlink" title="EEG-informed fMRI integration methods:"></a>EEG-informed fMRI integration methods:</h1><p>Data integration methods for mapping brain networks are subdivided into two types: univariate and multivariate methods. Univariate methods usually select only a single time-course representative of the phenomena of interest and then extract temporal or spectral features to predict BOLD changes. (EEG-informed) And multivariate methods take multiple EEG channels into consideration. </p>
+<h2 id="Univariate-methods"><a href="#Univariate-methods" class="headerlink" title="Univariate methods:"></a>Univariate methods:</h2><p>If a limited set of electrodes can reflect the phenomenon of interest of neural activity, the analyses can be concentrated on these electrodes. (Goldman et al., 2002) Fluctuations with a specific temporal structure can be extracted from the EEG using linear prediction algorithms only if the prior knowledge about the frequency and location of the sources of interest to be isolated is known. (Ferdowsi et al., 2015) The most commonly used spatial filtering strategy in this context is temporal ICA. (Leite et al., 2013) The most challenging part in ICA is the selection of ICs that best reflect the phenomenon of interest, and there are different selection criteria. In a visual inspection method, spatial patterns resembling that expected for a given activity of interest should be found in the IC topographies. (Debener et al., 2005). The events of interest can also be identified by inspecting the temporal dynamics of the IC time-courses. (Jann et al., 2008) If more than one EEG acquisition is performed, the reproducibility of the ICs across runs should also be considered. (Leite et al., 2013)</p>
+<p>Take epilepsy as example, the EEG is visually inspected for events of interest in the simplest approach of integrating EEG and fMRI. Inter-ictal epileptiform discharges (IEDs) are modeled as stick functions, and ictal activity is modeled as boxcar functions (Leal et al., 2016). These epileptic events can be divided into different states and then the representation of the seizure dynamics can be even finer. (Thornton et al., 2010) </p>
+<p>More complex transfer functions based on time-frequency decompositions of the EEG signal between EEG and BOLD signals have been implemented to account for the rich temporal and spectral profiles of the EEG. (Scheeringa et al.,2008) In a GLM analysis, with regressors including the EEG power over multiple frequency bands, the individual contribution to the BOLD signal and the interactions can be clarified. (de Munck et al., 2009) </p>
+<h2 id="Multivariate-methods"><a href="#Multivariate-methods" class="headerlink" title="Multivariate methods:"></a>Multivariate methods:</h2><p>Compared to univariate methods, multivariate methods utilize data from multiple EEG channels and can capture spatial information. </p>
+<p>Based on the hypothesis that resting-state networks are reflected in both EEG and BOLD signals, there are studies on BOLD correlates of EEG microstates. By spatially correlating the simultaneous EEG topographies with EEG microstates, spontaneous BOLD fluctuations occurring during rest can be predicted. (Yuan et al., 2012) And the EEG microstates can be previously identified by clustering (Britz et al., 2010), ICA (Yuan et al., 2012), or topographic time-frequency decomposition  (Schwab et al., 2015). </p>
+<p>Other multivariate methods particularly aim at reflecting functional connectivity across the brain. In order to map the inter- and intra-hemispheric flow of information, the partial directed coherence (a directed measure of functional connectivity) across frequency bands can be correlated with BOLD (Biazoli et al., 2013). Previous study used the phase synchronization index (PSI) computed for a specific frequency and channels and mapped task-dependent BOLD signal changes. (Mizuhara et al. 2005) Another study used global field synchronization (GFS) to predict BOLD changes associated with face integration (Kottlow et al. 2012). GFS can quantify the overall EEG synchrony across the scalp. </p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2019/12/01/Note%20for%20chapter%20preprocessing/" rel="prev" title="Note for chapter preprocessing">
+      <i class="fa fa-chevron-left"></i> Note for chapter preprocessing
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#EEG-informed-fMRI-integration-methods"><span class="nav-number">1.</span> <span class="nav-text">EEG-informed fMRI integration methods:</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Univariate-methods"><span class="nav-number">1.1.</span> <span class="nav-text">Univariate methods:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Multivariate-methods"><span class="nav-number">1.2.</span> <span class="nav-text">Multivariate methods:</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Vincentkovsky</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Vincentkovsky</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> v4.0.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">Theme – <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.6.0
+  </div>
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/pisces.js"></script>
+<script src="/js/next-boot.js"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
